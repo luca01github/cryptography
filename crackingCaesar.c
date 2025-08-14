@@ -45,7 +45,7 @@ int main() {
         }
     }
 
-    printf("The letter with the biggest frequency is %c (%d)\n",
+    printf("The most frequent letter is %c (%d)\n",
            mostFrequentchar, max);
 
     //Shift based on the assumption that the most frequent letter in english is 'e'
