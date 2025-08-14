@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <ctype.h>
-#define SIZE 26
 
 typedef struct {
     char c;
@@ -14,8 +13,8 @@ int main() {
         "kdqkjxehyput qssuii. Kdtuhijqdtydw xem je rhuqa iycfbu syfxuhi byau "
         "jxu Squiqh syfxuh sqd xubf yd tulubefydw ijhedwuh iuskhyjo cuqikhui";
 
-    Character letters[SIZE];
-    for (int i = 0; i < SIZE; i++) {
+    Character letters[26];
+    for (int i = 0; i < 26; i++) {
         letters[i].frequency = 0; // every letter starts with frequency = 0
         letters[i].c = 'a' + i;
     }
@@ -27,11 +26,11 @@ int main() {
         }
     }
 
-    for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < 26; i++) {
         printf("%-5c", letters[i].c);
     }
     putchar('\n');
-    for (int i = 0; i < SIZE; i++) {
+    for (int i = 0; i < 26; i++) {
         printf("%-5d", letters[i].frequency);
     }
     putchar('\n');
@@ -39,7 +38,7 @@ int main() {
     //Find the most frequent letter
     int max = letters[0].frequency;
     char mostFrequentchar = 'a';
-    for (int i = 1; i < SIZE; i++) {
+    for (int i = 1; i < 26; i++) {
         if (letters[i].frequency > max) {
             max = letters[i].frequency;
             mostFrequentchar = letters[i].c;
@@ -50,7 +49,7 @@ int main() {
            mostFrequentchar, max);
 
     //Shift based on the assumption that the most frequent letter in english is 'e'
-    int jump = (mostFrequentchar - 'e' + SIZE) % SIZE;
+    int jump = (mostFrequentchar - 'e' + 26) % 26;
     printf("Hypothesized shift: %d\n", jump);
 
     //Decrypting
