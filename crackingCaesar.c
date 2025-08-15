@@ -47,7 +47,7 @@ int main() {
     }
     printf("The most frequent letter is %c (%d)\n", mostFrequentchar, max);
 
-    // Hypothisizing jump based on the fact that the most frequent letter in
+    // Hypothesizing jump based on the fact that the most frequent letter in
     // english is 'e'
     int jump = (mostFrequentchar - 'e' + 26) % 26;
     printf("Hypothesized shift: %d\n", jump);
